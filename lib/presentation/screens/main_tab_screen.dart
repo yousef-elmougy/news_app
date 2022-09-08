@@ -60,9 +60,7 @@ class MainTabScreen extends StatelessWidget {
                     builder: (BuildContext context,
                         AsyncSnapshot<dynamic> snapshot) {
                       if (snapshot.hasData) {
-                        return AllArticles(
-                          article: snapshot.data,
-                        );
+                        return AllArticles(article: snapshot.data);
                       } else if (snapshot.hasError) {
                         return const ErrorText();
                       } else if (!(snapshot.hasData)) {
